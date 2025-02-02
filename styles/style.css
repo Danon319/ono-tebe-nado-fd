@@ -1,1 +1,380 @@
-/* место для вашего кода */
+
+/* шапка сайта */
+.header {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    align-items: center;
+    padding-top: 92px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 96px;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    line-height: 21.13px;
+    text-decoration-skip-ink: none;
+    font-family: "Raleway", "Arial" sans-serif;
+    font-weight: 400;
+}
+
+/* список ссылок в шапке сайта */
+.header_menu-list {
+    display: flex;
+    gap: 32px;
+    list-style: circle;
+    text-underline-offset: 2px;
+}
+
+/* элемент списка ссылок без точки */
+.header_menu-list-item_no-bullit {
+    list-style: none;
+}
+
+/* контейнер с логотипом */
+.header__logo {
+    width: 148px;
+}
+
+/* картинка с логотипом */
+.header__logo-image {
+    display: block;
+    width: 148px;
+    height: 105px;
+    overflow: visible;
+}
+
+/* ссылка в которую обёрнуто лого в шапке */
+.header__logo-link {
+    text-decoration: none;
+}
+/* контейнер с контактной информацией */
+.address {
+    font-style: normal;
+}
+
+/* контейнер с контактной информацией в шапке */
+.header__address {
+    max-width: 240px;
+    justify-self: end;
+}
+
+/* список с контактной информацией */
+.address-list {
+    list-style: none;
+    text-underline-offset: 4px;
+    line-height: 24.3px;
+}
+
+/* активная ссылка */
+.link_active-underline {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3.8px;
+}
+
+/* активная ссылка (без подчёркивания) */
+.link_active_no-underline {
+    text-decoration: none;
+}
+
+/* основная часть сайта */
+.main {
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 1);
+    font-family: "Raleway", "Arial" sans-serif;
+}
+
+/* контейнер с обложкой страницы */
+.cover {
+    position: relative;
+    min-height: 757px;
+    background-image: url("../images/cover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    margin-bottom: 180px;
+}
+
+/* полупрозрачный контейнер поверх секции */
+.overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+/* заголовок страницы */
+.cover__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+    line-height: 115px;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 165px;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+    font-weight: 700;
+}
+
+/*  класс для управления межбуквенным расстоянием в местах, где есть эти акценты */
+.letter-spacing-extended {
+    letter-spacing: 30px;
+}
+
+/* класс для управления левым текстом в заголовке */
+.aligned-text-left {
+    display: block;
+    text-align: left;
+}
+/* класс для управления центральным текстом в заголовке */
+.aligned-text-center {
+    display: block;
+    padding: 21px 0px 0px 31px;
+    text-align: center;
+}
+
+/* класс для управления правым текстом в заголовке */
+.aligned-text-right {
+    display: block;
+    padding: 20px 20px 20px 615px;
+    text-align: right;
+}
+
+/* контейнер для подзаголовка и кнопки */
+.cover__description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    z-index: 1;
+    margin: 85px 50px 50px 50px;
+    
+}
+
+/* текст подзаголовка */
+.cover__description-text {
+    word-spacing: 18.5px;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+/* кнопка "Сделать ставку" */
+.cover_bet-button {
+    width: 256px;
+    min-height: 51px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+    font-size: 22px;
+    text-align: center;
+    font-weight: 500;
+    border-color: rgba(255, 255, 255, 1);
+    border-width: 1px;
+    border-style: solid
+}
+
+/* контейнер с лотами аукциона */
+.lots {
+    display: grid;
+    grid-template-rows: 72px auto 48px;
+    column-gap: 22px;
+    max-width: 1052px;
+    margin-left: 25px;
+    background-color: rgba(255, 255, 255, 1);
+    margin-bottom: 120px;
+    grid-template-areas:
+    "heading"
+    "lots__card-list"
+    "look-more-link";
+}
+
+/*  заголовок секции lots */
+.lots__heading {
+    padding-left: 40px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 40px;
+    line-height: 46.96px;
+    font-weight: 700;
+    grid-area: heading;
+}
+
+/* список карточек-лотов */
+.lots__card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    grid-area: lots__card-list;
+    list-style: none;
+}
+
+/* карточка-лот */
+.lots__card-list-item {
+    color: rgba(255, 255, 255, 1);
+    min-width: 334px;
+    min-height: 596px;
+    z-index: 0;
+}
+
+/*  ссылка, обрамляющая карточку-лот */
+.card-link {
+    text-decoration: none;
+    z-index: 1;
+}
+
+/* основные стили внутренней части карточки-лота */
+.lot_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* фон карточки film */
+.card_type_film {
+    background-image: url("../images/card-lot-01.jpg");
+}
+
+/* фон карточки book */
+.card_type_book {
+    background-image: url("../images/card-lot-02.jpg");
+}
+
+/* карточки picture */
+.card_type_picture {
+    background-image: url("../images/card-lot-03.jpg");
+}
+
+/* заголовок карточки */
+.card__title {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    max-width: 254px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26.4px;
+    text-transform: uppercase;
+    padding-top: 48px;
+}
+
+/* текст карточки */
+.card__text {
+    max-width: 254px;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 48px;
+}
+
+/* ссылка «Посмотреть больше» */
+.lots__look-more-link {
+    padding-top: 30px;
+    padding-left: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    grid-area: look-more-link;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+/* контейнер с информацией о аукционе */
+.about {
+    display: grid;
+    grid-template-columns: 359px auto;
+    padding-left: 25px;
+    padding-top: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    padding-bottom: 180px; /*  Здесь padding, а не margin, потому что нужно было покрасить расстояние между блоками about и footer.  */
+}
+
+/* контейнер с логотипом */
+.about__logo {
+    padding-left: 47px;
+    padding-top: 35px;
+}
+
+/* изображение логотипа */
+.about__logo-image {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url("../images/logo-white.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+    padding: 47px;
+}
+
+/* заголовок секции «Об аукционе» */
+.about__title {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    padding-top: 136px;
+}
+
+/* блок для текстов (параграфов) секции «Об аукционе» */
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 100px;
+    font-weight: 400;
+    max-width: 688px;
+    font-size: 20px;
+}
+
+/* подвал сайта */
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    padding-bottom: 80px;
+}
+
+/* подвальный контейнер с контактной информацией */
+.footer__address {
+    max-width: 300px;
+    padding-left: 50px;
+}
+/* блок навигации по списку ссылок */
+.footer__menu {
+    padding-left: 100px;
+}
+
+/* список пунктов меню */
+.footer__menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1px;
+    padding-right: 3px;
+    list-style: none;
+}
+
+/* подвальный список ссылок на социальные сети */
+.footer__social-list {
+    padding-top: 1px;
+    padding-left: 26px;
+    justify-self: center;
+    display: flex;
+    gap: 48px;
+    list-style: none;
+}
+
+/*  иконка социальной сети */
+.footer__social-icon {
+    width: 48px;
+    height: 48px;
+}
